@@ -4,7 +4,7 @@
         - python3 -m venv venv
     Instalar django: pip install django
     Iniciar el repositorio de git: git init
-    Iniciar el proyecto de django: django-admin startproject premiosplatziapp
+    Iniciar el proyecto de django: django-admin startproject 'nomredelproyecto'
     Para evitar llevar al repositorio remoto archivos innecesarios es importante 
     crear el archivo: .gitignore (Donde se suele agregar la carpeta venv).
 
@@ -13,10 +13,10 @@
     asgi y wsgi son archivos que sirven para el despliegue a producción del proyecto
     settings son configuraciones como BD, zona horaria, lenguaje, etc.
     urls es el archivo que tiene las rutas del proyecto.
-    La subcarpeta es la que está afectada por django.
+    La subcarpeta es la que está afectada por django cambiar a este directorio.
 
 ## Servidor de desarrollo.
-    - py manage-py runserver
+    - python manage.py runserver
     Detalle de mensaje:
     Watching for file … : A cada cambio que hagas en los archivo, Django lo notará y lo reflejará en el servidor.
     System check identified no issues … : No hay problemas y se silenciaron 0.
@@ -88,24 +88,23 @@
     Un objeto con la o las variables que le estaremos pasando a nuestra template
 
 
-generic views --> funciones
+## Equivalencias de las views.
+    generic views --> funciones
 
-class viewss ---> clases
+    class viewss ---> clases
 
 
-Si se puede:
+## Generic views si se puede.
+     Si podemos seguir el patrón:
+     cargar datos de la base de datos
+     Generar template
+     Mostrar template
+     Si no se pude:
 
-Generic views.
-Si podemos seguir el patrón:
-cargar datos de la base de datos
-Generar template
-Mostrar template
-Si no se pude:
+## Functions based views.
+    Escaparse del patrón anterior. Si es mas complejo, como mostrar 2 formularios en la misma página
 
-Functions based views.
-Escaparse del patrón anterior. Si es mas complejo, como mostrar 2 formularios en la misma página
+   Comentarios en VSC:
 
-Comentarios en VSC:
-
-CTRL + K + C
-CTRL + K + U
+   CTRL + K + C
+   CTRL + K + U
